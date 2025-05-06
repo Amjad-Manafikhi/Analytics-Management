@@ -10,11 +10,11 @@ export default function Navbar(){
         <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white ">
             <h1 className="w-full text-3xl font-bold text-[#00df9a]">React.</h1>
             <ul className="hidden md:flex">
-                <a href="#home" className="p-4">Home</a>
-                <a href="#company" className="p-4">Company</a>
-                <a href="#newsletter" className="p-4">Newsletter</a>
-                <a href="#resources" className="p-4">Resources</a>
-                <a href="#contact" className="p-4">Contact</a>
+                <a href="#home" className="hover:text-gray-400 p-4">Home</a>
+                <a href="#company" className="hover:text-gray-400 p-4">Company</a>
+                <a href="#newsletter" className="hover:text-gray-400 p-4">Newsletter</a>
+                <a href="#resources" className="hover:text-gray-400 p-4">Resources</a>
+                <a href="#contact" className="hover:text-gray-400 p-4">Contact</a>
             </ul>
 
             <div className="cursor-pointer md:hidden" onClick={handleNav}>
@@ -28,12 +28,12 @@ export default function Navbar(){
             >
 
                 <h1 className="m-[8px] w-full text-3xl font-bold text-[#00df9a]">React.</h1>
-                <ul className="p-3 ">
-                    <li className="p-4 border-b border-gray-500">Home</li>
-                    <li className="p-4 border-b border-gray-500">Company</li>
-                    <li className="p-4 border-b border-gray-500">Resources</li>
-                    <li className="p-4 border-b border-gray-500">About</li>
-                    <li className="p-4 border-b border-gray-500">Contact</li>
+                <ul className="p-3 flex flex-col ">
+                    <a href="#home" className=" hover:text-gray-400 p-4 border-b border-gray-500">Home</a>
+                    <a href="#company" className="hover:text-gray-400 p-4 border-b border-gray-500">Company</a>
+                    <a href="#newsletter" className="hover:text-gray-400 p-4 border-b border-gray-500">Newsletter</a>
+                    <a href="#resources" className="hover:text-gray-400 p-4 border-b border-gray-500">Resources</a>
+                    <a href="#contact" className="hover:text-gray-400 p-4 border-b border-gray-500">Contact</a>
                 </ul>
             </div>
             
