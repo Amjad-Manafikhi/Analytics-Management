@@ -7,6 +7,8 @@ export default function Navbar(){
     }
    
     return (
+        <>
+        {nav && <div className="w-[100%] h-screen fixed bg-transparent z-8 " onClick={handleNav}></div>}
         <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white ">
             <h1 className="w-full text-3xl font-bold text-[#00df9a]">React.</h1>
             <ul className="hidden md:flex">
@@ -26,10 +28,8 @@ export default function Navbar(){
                 ${!nav ? "-translate-x-[320px]" : "-translate-x-[20px]"} 
                 bg-[#000300] h-full border-r border-gray-500 w-[60%] max-w-[300px] uppercase`}
             >
-
                 <h1 className="m-[8px] w-full text-3xl font-bold text-[#00df9a]">React.</h1>
-                <ul className="p-3 flex flex-col ">
-                    <a href="#home" className=" hover:text-gray-400 p-4 border-b border-gray-500">Home</a>
+                <ul className="p-3 flex flex-col ">                        <a href="#home" className=" hover:text-gray-400 p-4 border-b border-gray-500">Home</a>
                     <a href="#company" className="hover:text-gray-400 p-4 border-b border-gray-500">Company</a>
                     <a href="#newsletter" className="hover:text-gray-400 p-4 border-b border-gray-500">Newsletter</a>
                     <a href="#resources" className="hover:text-gray-400 p-4 border-b border-gray-500">Resources</a>
@@ -38,5 +38,6 @@ export default function Navbar(){
             </div>
             
         </div>
+        </>
     )
 }
