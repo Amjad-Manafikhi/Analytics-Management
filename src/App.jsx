@@ -4,8 +4,7 @@ import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import Analytics from './components/Analytics.jsx';
-import Newsletter from './components/NewsLetter.jsx';
-import Cards from './components/cards.jsx';
+import Newsletter from './components/Newsletter.jsx';
 import CardsContainer from './components/CardsContainer.jsx';
 import Footer from './components/Footer.jsx';
 import './App.css'
