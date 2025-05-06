@@ -52,7 +52,6 @@ To run the project locally:
    npm run dev
    ```
 
-The application will be running on `http://localhost:3000`.
 
 ---
 
@@ -76,9 +75,3 @@ This project serves as a **static one-page layout** with sections dedicated to v
 ## Contributing
 
 If you want to contribute, feel free to fork the repository, make changes, and create a pull request. I welcome suggestions for improvements!
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
