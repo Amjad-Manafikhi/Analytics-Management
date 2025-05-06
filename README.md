@@ -61,6 +61,7 @@ This project serves as a **static one-page layout** with sections dedicated to v
 
 - In mobile view, the navbar collapses into a hamburger menu. Clicking the menu reveals a sidebar for easier navigation across different sections.
 - Each section of the page (Home, Company, Newsletter, Resources, Contact) has placeholder content that can be replaced with actual data.
+- When scrolling, the home page starts to disappear and a button smoothly appears to help you scroll back to home with one click.
 
 ---
 
