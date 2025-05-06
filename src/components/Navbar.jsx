@@ -4,7 +4,7 @@ import { FaCircleChevronUp } from "react-icons/fa6";
 
 export default function Navbar({isInView}){
     const [nav,setNav] = React.useState(false)
-    const homeElem = React.useRef(null);
+
     function handleNav(){
         setNav(prev => !prev)
     }
@@ -45,7 +45,6 @@ export default function Navbar({isInView}){
                 </ul>
             </div>
             <FaCircleChevronUp  
-                ref={homeElem}
                 onClick={handleUp}
                 className={`box-border text-gray-500 bg-black border-none rounded-full duration-300 ${!isInView ? "w-[40px] h-[40px]" : "w-0 h-0"} z-10 cursor-pointer fixed bottom-7 right-7`}  />
         </div>

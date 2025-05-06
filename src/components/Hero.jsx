@@ -11,7 +11,7 @@ export default function Hero({setIsInView}){
             setIsInView(entry.isIntersecting);
         },
         {
-            threshold: 0.1, // 10% of the element is visible
+            threshold: 0.3, // 30% of the element is visible
         }
         );
 

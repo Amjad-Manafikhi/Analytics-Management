@@ -2,7 +2,6 @@ import React from "react";
 
 
 export default function Cards(props){
-    console.log(props.src)
     return(
         <div className="bg-white rounded-2xl flex flex-col border border-gray-200 w-[250px] shadow-2xl hover:scale-105  duration-500 p-7 items-center">
             <img src={props.src} alt="/" className="w-[100px] mb-4" />
