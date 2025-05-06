@@ -1,9 +1,17 @@
 import React from "react"
 import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai"
-export default function Navbar(){
+import { FaCircleChevronUp } from "react-icons/fa6";
+
+export default function Navbar({isInView}){
     const [nav,setNav] = React.useState(false)
+    const homeElem = React.useRef(null);
     function handleNav(){
         setNav(prev => !prev)
+    }
+    function handleUp(){
+        const el = document.getElementById("home");
+        if (el) el.scrollIntoView({ behavior: "smooth" })
+
     }
    
     return (
@@ -36,7 +44,10 @@ export default function Navbar(){
                     <a href="#contact" className="hover:text-gray-400 p-4 border-b border-gray-500">Contact</a>
                 </ul>
             </div>
-            
+            <FaCircleChevronUp  
+                ref={homeElem}
+                onClick={handleUp}
+                className={`box-border text-gray-500 bg-black border-none rounded-full duration-300 ${!isInView ? "w-[40px] h-[40px]" : "w-0 h-0"} z-10 cursor-pointer fixed bottom-7 right-7`}  />
         </div>
         </>
     )

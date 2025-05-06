@@ -13,6 +13,8 @@ import 'aos/dist/aos.css';
 
 
 function App() {
+  const [isInView, setIsInView ] = useState(true);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -20,8 +22,8 @@ function App() {
   return (
     
     <div className='scroll-smooth'>
-      <Navbar />
-      <Hero />
+      <Navbar isInView={isInView} />
+      <Hero setIsInView={setIsInView}/>
       <Analytics />
       <Newsletter />
       <CardsContainer />

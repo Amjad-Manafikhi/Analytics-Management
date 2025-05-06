@@ -1,9 +1,31 @@
 import React from "react"
 import { ReactTyped } from "react-typed";
-export default function Hero(){
+export default function Hero({setIsInView}){
+
+
+    const elementRef = React.useRef(null);
+
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(
+        ([entry]) => {
+            setIsInView(entry.isIntersecting);
+        },
+        {
+            threshold: 0.1, // 10% of the element is visible
+        }
+        );
+
+        if (elementRef.current) {
+        observer.observe(elementRef.current);
+        }
+
+        return () => {
+        if (elementRef.current) observer.unobserve(elementRef.current);
+        };
+    }, []);
 
     return (
-        <div id="home" className="scroll-smooth text-white w-full h-screen flex mt-[-96px]">
+        <div ref={elementRef} id="home" className="scroll-smooth text-white w-full h-screen flex mt-[-96px]">
             <div className="max-w-[600px] w-[85%] flex flex-col items-center justify-center m-auto">
                 <p className="text-center md:text-3xl sm:text-2xl  font-bold text-[#00df9a] ">GROWING WITH DATA ANALYTICS</p>
                 <h1 className="text-center md:text-4xl sm:text-3xl text-xl font-bold m-auto py-4">GROW WITH DATA</h1>
