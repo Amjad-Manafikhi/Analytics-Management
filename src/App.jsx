@@ -23,10 +23,10 @@ function App() {
     
     <div className='scroll-smooth'>
       <Navbar isInView={isInView} />
-      <Hero setIsInView={setIsInView}/>
+      <Hero setIsInView={setIsInView} />
       <Analytics />
       <Newsletter />
-      <CardsContainer />
+      <CardsContainer/>
       <Footer />
     </div>
   )

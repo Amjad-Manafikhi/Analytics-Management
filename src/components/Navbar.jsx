@@ -37,7 +37,8 @@ export default function Navbar({isInView}){
                 bg-[#000300] h-full border-r border-gray-500 w-[60%] max-w-[300px] uppercase`}
             >
                 <h1 className="m-[8px] w-full text-3xl font-bold text-[#00df9a]">React.</h1>
-                <ul className="p-3 flex flex-col ">                        <a href="#home" className=" hover:text-gray-400 p-4 border-b border-gray-500">Home</a>
+                <ul className="p-3 flex flex-col ">                        
+                    <a href="#home" className=" hover:text-gray-400 p-4 border-b border-gray-500">Home</a>
                     <a href="#company" className="hover:text-gray-400 p-4 border-b border-gray-500">Company</a>
                     <a href="#newsletter" className="hover:text-gray-400 p-4 border-b border-gray-500">Newsletter</a>
                     <a href="#resources" className="hover:text-gray-400 p-4 border-b border-gray-500">Resources</a>

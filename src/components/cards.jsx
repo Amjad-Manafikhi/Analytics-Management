@@ -1,12 +1,16 @@
 import React from "react";
-
-
+import AddingEffect from './AddingEffect.jsx';
 export default function Cards(props){
     return(
         <div className="bg-white rounded-2xl flex flex-col border border-gray-200 w-[250px] shadow-2xl hover:scale-105  duration-500 p-7 items-center">
             <img src={props.src} alt="/" className="w-[100px] mb-4" />
             <p className="font-bold">{props.number} User</p>
-            <h3 className="font-bold text-3xl mt-2" >${props.price}</h3>
+            <h3 className="font-bold text-3xl mt-2" >
+                {'$'}
+                {props.cardInView ? <AddingEffect number={props.price}/> 
+                : "-"  
+                }
+            </h3>
             <ul className="p-3">
                 <li className="p-2 border-b border-gray-300">{props.number*500} GB Storage</li>
                 <li className="p-2 border-b border-gray-300">{props.number} Granted User</li>
