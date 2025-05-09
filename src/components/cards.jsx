@@ -7,7 +7,7 @@ export default function Cards(props){
             <p className="font-bold">{props.number} User</p>
             <h3 className="font-bold text-3xl mt-2" >
                 {'$'}
-                {props.cardInView ? <AddingEffect prevNumber={0} newNumber={props.price} time={500}/> 
+                {props.cardInView ? <AddingEffect prevNumber={0} newNumber={props.price} time={1000}/> 
                 : "-"  
                 }
             </h3>
