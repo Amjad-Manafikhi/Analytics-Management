@@ -1,28 +1,27 @@
+import { useEffect, useRef, useState } from "react";
 
+export default function AddingEffect({ prevNumber, newNumber, time }) {
+  const [value, setValue] = useState(prevNumber);
+  const rafId = useRef(null);
 
-import { useEffect, useState } from "react"
+  useEffect(() => {
+    const startTime = performance.now();
 
-export default function AddingEffect({number}) {
-    const[value, setValue] = useState(Math.max(0,number-75));
-    console.log(value)
-    useEffect(() => {
-        if (value >= number) return;
+    const animate = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / time, 1);
+      const interpolated = Math.round(prevNumber + (newNumber - prevNumber) * progress);
+      setValue(interpolated);
 
-        const interval = setInterval(() => {
-        setValue((prev) => {
-            if (prev === number) {
-            clearInterval(interval);
-            return prev;
-            }
-            return prev + 1;
-        });
-        }, 20); // Faster increment
+      if (progress < 1) {
+        rafId.current = requestAnimationFrame(animate);
+      }
+    };
 
-        return () => clearInterval(interval);
-  }, [value, number]);
-    return (
-        value
-    ) 
+    rafId.current = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(rafId.current);
+  }, [prevNumber, newNumber, time]);
+
+  return <>{value}</>;
 }
-
-
